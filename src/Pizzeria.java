@@ -19,11 +19,11 @@ public class Pizzeria {
     while (true) {
       MenuCommand command = MenuCommand.readCommand(scanner);
       switch (command) {
-        case START:
-          Pizza pizza = Pizza.readData(scanner);
-          break;
         case UNEXPECTED:
           System.out.println("Некорректная команда");
+          break;
+        case START:
+          Pizza pizza = Pizza.readData(scanner);
           break;
         case EXIT:
           return; // завершение работы метода main()
